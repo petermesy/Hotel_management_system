@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .bok{
+            text-align: center;
+            border: 1px solid black;
+            line-height: 2.8rem;
+            width: 40%;
+            margin-left: 32%;
+            background-color: rgb(122, 145, 183);
+            border-radius: 20px;
+            margin-top: 50px;
+            overflow: auto;
+        }
+        @media (max-width: 430px) {
+  .bok{
+    width: 350px;
+    margin-left: 30px;
+    overflow: auto;
+  }
+        }
+   input{
+    height: 25px;
+    text-align: left;
+   }
+   header{
+  height: 90px;
+  background-color: #000;
+  margin-bottom: 0px;
+   color: #fff;
+  }
+  .book{
+  padding: 15px;
+  width: 150px;
+  background-color: #000;
+  color: yellow;
+}
+.book:hover{
+  background-color: yellow;
+  color: #000;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    color: yellow;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .toggle {
+    border: none;
+    background: #000;
+    color: yellow;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .nav {
+    display: none;
+  }
+  
+
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-link {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    color: yellow;
+  }
+
+  @media (min-width: 768px) {
+    .nav {
+      display: block;
+    }
+    .nav-list {
+      display: flex;
+     
+    }
+    .toggle {
+      display: none;
+    }
+  }
+  
+  .show {
+    display: block;
+  }
+
+  .logo {
+    width: 120px;
+    height: 80px;
+    padding-bottom: 20px;
+    z-index: 1;
+    margin-top: 30px;
+    font-weight: bold;
+    color: yellow;
+  }
+  
+  input{
+    width: 300px;
+    height: 35px;
+    border: 1px solid blue;
+  }
+  select{
+    width: 300px;
+    height: 35px;
+    border: 1px solid blue;
+    margin-left: -200px;
+  }
+  .submit{
+width: 100px;
+margin-left: -200px;
+  }
+  .inptext{
+    margin-left: 50px;
+  }
+    </style>
+</head>
+<body>
+   
+
+        <header class="header">
+          <div><h1 class="logo">Hotel</h1></div>
+          <button class="toggle" id="toggle">☰</button>
+          <nav class="nav" id="nav">
+            <ul class="nav-list">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+          </nav>
+        </header>
+        <script>
+        var toggle = document.getElementById("toggle");
+        var nav = document.getElementById("nav");
+        toggle.addEventListener("click", function() {
+          nav.classList.toggle("show");
+        });
+        </script>
+
+<h1 style="text-align: center; color: rgb(66, 61, 56);"> Book Now</h1>
+    <div class="bok">
+       
+    <form action="booknow.php" method="post">
+         <label for="Name">Name:</label>
+         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" placeholder="Please Enter your Name" id="name" class="inptext" name="Name" required> <br>
+        <label for="phone"> Phone Number:</label>
+        <input type="text" placeholder="Enter your Phone Number" id="phone" class="inptext" name="phone" required><br>
+        <label for="email">Email:</label>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <input type="email" placeholder="Enter your Email Address" id="emaill" class="inptext" name="email" required><br>
+        <label for="adsress">Address: </label>
+        &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" placeholder="Enter your Address" id="address" class="inptext" name="address" required><br>
+        <label for="datein">Check in Date:</label>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="date" id="datein" name="datein" required><br>
+       <label for="dateout">Check out Date:</label>
+     
+      <input type="date" id="dateout" name="dateout"  class="inptext" required><br>
+    
+       <label for="number">Guests:</label>
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="number" name="number" placeholder="Enter number of Guests" class="inptext" required><br>
+       <label for="numberRoom">Number of Rooms:</label>
+        <input type="number" name="numberRoom" placeholder="Enter Number of Rooms" class="inptext" required><br>
+    
+    
+        <label for="roomType">Select Room Type:</label>
+        <select name="roomType" id="roomType" aria-placeholder="room Type" class="inptext" required>
+        <option value="Elegant suit Room">Elegant suit Room</option>
+        <option value="Queen Grand View">Queen Grand View</option>
+        <option value="Twin Room">Twin Room</option>
+        <option value="Connected Family room">Connected Family room</option>
+       </select><br>
+       
+       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="submit" value="submit" name="submit" class="submit">
+        </form>
+
+
+<script>
+  document.getElementById("datein").addEventListener("change", function() {
+    var input = this.value; // Get the date input value (e.g., "2024-02-22")
+    var dateEntered = new Date(input); // Convert to a Date object
+    console.log(input); // Log the input value
+    console.log(dateEntered); // Log the Date object
+});
+
+</script>
+
+        
+    </div>
+        </body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rooms.css">
+ <!--    css icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <!--  follow icon linl -->
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+ 
+  <!-- HEADER -->
+<header class="header" id="myHeader">
+  <div class="content">
+    <div class="logo"> <h1>Hotel</h1></div>
+    <button class="toggle" id="toggle">☰</button>
+    <nav class="nav show" id="nav">
+      
+        <ul class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="book.html">Book Now</a></li>
+     
+      </ul>
+    </nav>
+  </div>
+
+<!-- javascript code for header -->
+<script>
+  // JavaScript
+// Get the toggle button and the nav element
+var toggle = document.getElementById("toggle");
+var nav = document.getElementById("nav");
+
+// Add a click event listener to the toggle button
+toggle.addEventListener("click", function() {
+  // Toggle the "show" class on the nav element
+  nav.classList.toggle("show");
+});
+
+</script>
+    <script>
+      // When the user scrolls the page, execute myFunction
+window.onscroll = function() {
+    myFunction();
+};
+
+// Get the header
+var header = document.getElementById("myHeader");
+
+// Get the offset position of the header
+var sticky = header.offsetTop;
+
+// Add the sticky class to the header when it reaches its scroll position
+function myFunction() {
+    if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
+    </script>
+  </header>
+
+  <div class="elegantRoom">
+ Twin Room
+  </div>
+  <section class="Elegant">
+    <head>
+      <title>Image slideshow</title>
+      <script type="text/javascript">
+        var images=["r1.jpg", "r3.jpg", "r4.jpg",
+         ];
+        var currentImageIndex=0;
+  
+        function changeImage(){
+          document.getElementById('slideshow').src=images[currentImageIndex];
+              currentImageIndex=(currentImageIndex+1)%images.length;
+        }
+       // Change image every 3 seconds
+       setInterval(changeImage,3000);
+     </script>
+    </head>
+    <body>
+      <img src="images.jpg" id="slideshow">
+    </body>
+  </section>
+ <h1 style="margin-left: 70px;">Room Services</h1>
+<section class="icon">
+  <div class="class">
+    <div class="class-single">
+      <i class="fas fa-wifi"></i>
+     Wi-Fi
+    </div>
+    <div class="class-single">
+      <i class="fas fa-lock"></i>
+      Electronic Safe Deposit Box</i>
+ 
+    </div>
+    <div class="class-single">
+      <i class="fas fa-swimming-pool"></i>
+        Swimming Pool</h2>
+    </div>
+    <div class="class-single">
+      <i class="fas fa-satellite-dish"></i>
+        Satalite</h2>
+    </div>
+    <div class="class-single">
+      <i class="fas fa-dumbbell"></i>
+      Well-Equipped Gymnasium</h2>
+    </div>
+    <div class="class-single">
+      <i class="fas fa-dumbbell"></i>
+        Bathrobe and Slipper</h2>
+    </div>
+    <div class="class-single">
+      <i class="fa fa-bath" aria-hidden="true"></i> Bathroom Herbal Amenities</h2>
+    </div>
+    <div class="class-single">
+      <i class="fa-solid fa-money-check"></i>ATM</h2>
+    </div> 
+  </div>
+  
+</section>
+    <footer>
+      <div class="follow">
+      </div>
+      <span class="copy"><h4>  Hotel Arbaminch &copy; All Right Reserved</h4></span>
+    <ul class="footer-list" >
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="book.html">Book Now</a></li>
+    </ul>
+    <div class="follow"> Follow us on <a href="#" class="fa fa-instagram" ></a>
+      <a href="#" class="fa fa-facebook" style="margin-left: 100px;"></a>
+      <a href="#" class="fa fa-whatsapp" style="margin-left: 100px;"></a>
+      <a href="#" class="fa fa-tiktalk" style="margin-left: 100px;"></a></div>
+    </footer>
+</body>
+</html>

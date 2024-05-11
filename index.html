@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management</title>
+    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+   
+      
+</head>
+<body class="homebody">
+<header class="header">
+  <div><h1 class="logo">Hotel</h1></div>
+  <button class="toggle" id="toggle">☰</button>
+  <nav class="nav" id="nav">
+    <ul class="nav-list">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#ourrooms">Rooms</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contactt">Contact</a></li>
+   
+      <li><a class="book" href="book.html" >BOOK NOW</a></li>
+ 
+    </ul>
+  </nav>
+</header>
+<script>
+var toggle = document.getElementById("toggle");
+var nav = document.getElementById("nav");
+toggle.addEventListener("click", function() {
+  nav.classList.toggle("show");
+});
+</script>
+
+
+<section class="home" id="home">                                               
+<div class="video-wrapper">
+  <video autoplay loop muted>
+    <source src="vid.mp4" type="video/mp4">
+  </video>
+  <div class="content">
+    <h1 style="font-size: 60px; color: yellow; text-align: center;"> Hotel</h1>
+    <p style="font-size:60px; color:yellow; text-align: center;">ARBA MINCH</p>
+  </div>
+</div>
+
+
+</section>
+
+
+<div class="sliddescript">
+  <img id="imagslideshow"  alt="sslideshow">
+<h2 class="service">OUR AWESOME SERVICES</h2>
+  <p id="imagdescription"></p>
+ 
+     <script>
+       // An array of image sources
+var images0 = ["1.jpg", "2.jpg", "3.jpg","food1.jpg", "4.jpg","food.jpg","drink.jpg"];
+var descriptions = ["Swimming pool", "Food", " Full gym","Food", "Bed Rooms", "Food","Drinks"];
+var current = 0;
+var interval;
+function showImage() {
+  var img = document.getElementById("imagslideshow");
+  img.src = images0[current];
+  var desc = document.getElementById("imagdescription");
+  desc.textContent = descriptions[current];
+}
+function nextImage() {
+  current++;
+  if (current >= images.length) {
+    current = 0;
+  }
+  showImage();
+}
+function startSlideshow() {
+  interval = setInterval(nextImage, 2500);
+}
+function stopSlideshow() {
+  clearInterval(interval);
+}
+window.onload = showImage;
+window.onmouseover = startSlideshow;
+window.onmouseout = stopSlideshow;
+    </script>
+     
+</div>
+
+
+
+<section class="autohall">
+  <div class="dark left">
+      <head>
+          <title>Image Slideshow</title>
+          <h2 class="ourm">MULTI PURPOSE HALLS (Meeting & Events Facilities)</h2>
+          <script type="text/javascript">
+              var images = ["h1.jpg","h2.jpg","h3.jpg","h4.jpg","h5.jpg","h6.jpg","h1.jpg" ];
+              var currentImageIndex = 0;
+      
+              function changeImage() {
+                  document.getElementById('slideshow').src = images[currentImageIndex];
+                  currentImageIndex = (currentImageIndex + 1) % images.length;
+              }
+      
+              // Change image every 3 seconds
+              setInterval(changeImage, 3000);
+          </script>
+      </head>
+      <body>
+          <img src="image1.jpg" id="slideshow">
+      </body>
+  </div><br><br><br><br><br><br><br><br><br>
+  <b>Conference Rooms:</b>  Equipped with video conference systems, large screen projectors, and simultaneous interpretation services,
+   these spaces cater to international conventions and small meetings1. <br><br>
+ <b>Banquet Halls:</b> Ideal for weddings, corporate events, and celebrations, 
+banquet halls offer elegant settings, customizable layouts, and professional event planning services. <br><br>
+<b>Function Rooms: </b> Versatile spaces for seminars, workshops, and social gatherings, function rooms adapt to
+ various event requirements. <br><br>
+ <b>Ballrooms:</b> Grand and opulent, ballrooms host gala dinners, award ceremonies, and large-scale events, often featuring exquisite decor and spacious dance floors
+<br><br><br>
+</section> 
+
+
+<div id="ourrooms">
+<div class="check">
+  <h1>OUR FAVORITE ROOMS</h1>
+  <h3 style="color: gray;">Check out now our best rooms</H3>
+</div>
+
+
+<section class="icon" id="ourrooms">
+  <div class="class">
+    <div class="class-single"><a href="Elegant.html"><img src="ele.jpg" class="taimg"><br><p class="descrip">Elegant Suit Rooms</p></a></div>
+    <div class="class-single"><a href="Queen.html"><img src="que.jpg" class="taimg"><br><p class="descrip">Queen Grand View </p></a></div>
+    <div class="class-single"><a href="Twin.html"><img src="rr1.jpg" class="taimg"><br><p class="descrip">Twin Room</p></a></div>
+    <div class="class-single"><a href="family.html"><img src="fam.jpeg" class="taimg"><br><p class="descrip">Connected family Rooms.</p></a></div>
+    
+  </div>
+</section>    
+</div>
+
+
+<div class="contactmap">
+<div class="contactt" id="contactt">
+  <form method="post" action="book.php">
+      <hr>
+  <h1 style="text-align: center;">Contact us</h1>
+  <div class="respoin">
+    <input type="text" placeholder="Name" id="name" class="inptext" name="yourName" required> 
+    <input type="text" placeholder="phone" id="phone" class="inptext" name="phone" required><br>
+    <input type="email" placeholder="Email" id="emaill" class="inptext" name="email" required>
+    <input type="text" placeholder="Address" id="address" class="inptext" name="address" required><br>
+  </div>
+  <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Your message" class="comment" name="comment" required></textarea><br>
+  <input type="submit" value="Send your message" class="submitb" name="submit" ><br>
+    
+</form>
+</div>
+
+<div class="map">
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""></script>
+    <script>
+      // Initialize the map and set its view to the given coordinates and zoom level
+      var map = L.map('map').setView([6.0333, 37.55], 13);
+  
+      // Add a tile layer to the map (e.g. OpenStreetMap)
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+        maxZoom: 18
+      }).addTo(map);
+  
+      // Create a marker and add it to the map
+      var marker = L.marker([6.0333, 37.55]).addTo(map);
+  
+      // Create a popup and bind it to the marker
+      marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+    </script>
+
+</div>
+</div>
+
+<footer class="foot">
+  
+ 
+  <span class="copy"><h4>  Hotel Arbaminch &copy; All Right Reserved</h4></span>
+<ul class="footer-list" >
+  <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+  <li class="nav-item"><a class="nav-link" href="#ourrooms">Rooms</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contactt">Contact</a></li>
+  <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+
+</ul>
+<div class="follow"> Follow us on <a href="#" class="fa fa-instagram" ></a>
+  <a href="#" class="fa fa-facebook" style="margin-left: 100px;"></a>
+  <a href="#" class="fa fa-whatsapp" style="margin-left: 100px;"></a>
+  <a href="#" class="fa fa-tiktalk" style="margin-left: 100px;"></a></div>
+
+</footer>
+</body>
+</html>

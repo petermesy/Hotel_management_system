@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Basic table styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Hide the content initially */
+        .content-row {
+            display: none;
+        }
+    </style>
+    <script>
+        function toggleContent(rowId) {
+            const row = document.getElementById(rowId);
+            row.style.display = row.style.display === 'none' ? 'table-row' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="content-row" id="row1">
+                <td>Widget A</td>
+                <td>$19.99</td>
+                <td>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac justo euismod, tincidunt libero vel, aliquam nunc.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <!-- Button to show/hide content -->
+                    <button onclick="toggleContent('row1')">Toggle Content</button>
+                </td>
+            </tr>
+            <tr class="content-row" id="row2">
+                <td>Widget B</td>
+                <td>$24.99</td>
+                <td>
+                    Ut tristique, justo eu aliquet tincidunt, purus ex tincidunt urna, vel tincidunt justo nunc vel odio.
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <!-- Button to show/hide content -->
+                    <button onclick="toggleContent('row2')">Toggle Content</button>
+                </td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</body>
+</html>

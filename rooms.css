@@ -1,0 +1,211 @@
+*{
+ 
+  box-sizing: border-box;
+  margin: 0;
+}
+header{
+    height: 90px;
+   background-color: rgb(156, 152, 152);
+    margin-bottom: 15px;
+   color: white;
+}
+.content{
+  padding: 16px;
+  padding-top: 10px;
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.book{
+    padding: 15px;
+/*     height: 10px; */
+width: 150px;
+}
+
+.header {
+   
+  
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+    padding: 10px;
+  }
+  
+  /* Style the logo */
+  .logo {
+    width: 120px;
+    height: 80px;
+    padding-bottom: 20px;
+    z-index: 1;
+  }
+  
+  /* Style the toggle button */
+  .toggle {
+    margin-top: -6rem;
+    border: none;
+    background: gray;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  .show{
+    background-color: white;
+    margin-top: 2rem;
+    margin-right: -2rem;
+ 
+  }
+.show a{
+color: black;
+}
+
+  /* Style the nav element */
+  .nav {
+    display: none;
+    float: right;
+    position: relative;
+    bottom: 24px;
+    
+  }
+  
+  /* Style the nav list */
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: -5rem;
+    color: white;
+    margin-right: 40px;
+    font-size: 2rem;
+   position: relative;
+   bottom: 10px;
+    
+  }
+  
+  /* Style the nav links */
+  .nav-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  .nav-link:hover {
+       background-color: #e8f66b;
+       border-radius: 10px;
+     }
+  /* Change the color of nav links on hover */
+  .footer-list .nav-link:hover {
+ background-color: #000; 
+    border-radius: 10px;
+    font-size: large;
+  }
+  
+  /* Add a media query for larger screens */
+  @media (min-width: 768px) {
+    /* Show the nav element */
+    .nav {
+      display: block;
+    }
+             
+    /* Make the nav list horizontal */
+    .nav-list {
+      display: flex;
+     
+    }
+  
+    /* Hide the toggle button */
+    .toggle {
+      display: none;
+    }
+  }
+  
+  /* Add a class for showing the nav element on small screens */
+  .show {
+    display: block;
+  }
+  
+.elegantRoom{
+  height: 87px;
+  width: 100%;
+  background-color: beige;
+  color: black;
+  padding-top: 30px;
+  padding-left: 60px;
+  font-size: 3rem
+}
+#slideshow{
+  width: 680px;
+  margin-top: 70px;
+  margin-left: 70px;
+  margin-bottom: 70px;
+  }
+  .icon {
+    margin-left: 80px;
+    border-spacing: 50px; 
+    /* Adjust the vertical gap as needed */
+
+  }
+   @media screen and(min-width:992px){
+
+   }
+
+   .class{
+    display: grid;
+    row-gap: 2rem;
+   }
+
+   .class-single{
+    height: 50px;
+    width: 250px;
+    border: 1px solid black;
+   text-align: center;
+   padding-top: 15px;
+   }
+
+   @media screen and (min-width:760px) {
+    .class{
+      grid-template-columns: 1fr 1fr;
+    }
+    
+   }
+   @media screen and (min-width:960px) {
+    .class{
+      grid-template-columns: repeat(3 , 1fr);
+    }
+    
+   }
+
+   .footer-list{
+    background-color: black;
+    margin-bottom: 0px;
+    display: flex;
+    line-height: 7rem;
+   position: relative;
+   bottom: -140px;
+  
+  }
+  .footer-list .nav-item{
+    padding-left: 10%;
+  }
+  footer{
+    text-align: center;
+   }
+  .copy{
+    color: white; 
+    position: relative;
+     top: 260px;
+     z-index: 1;
+     
+    
+  }
+  .follow{
+    color: white;
+    position: relative;
+  margin-left: 900px;
+    bottom: -100px;
+  }  

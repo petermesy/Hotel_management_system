@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<head>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <style>
+          *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           }
+           body{
+            background-color:  #f5f5f5; 
+            margin: 0px;
+        }
+        .about{
+         
+            border: 1px solid black;
+            width: 65%;
+            margin-left: 15%;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 100px;
+            background-color: beige;
+        }
+        .h1{
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="rooms.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header" id="myHeader">
+    <div class="content">
+      <div class="logo"> <h1>Hotel</h1></div>
+      <button class="toggle" id="toggle">☰</button>
+      <nav class="nav show" id="nav">
+        
+          <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+         
+       
+        </ul>
+      </nav>
+    </div>
+  
+  <!-- javascript code for header -->
+  <script>
+    // JavaScript
+  // Get the toggle button and the nav element
+  var toggle = document.getElementById("toggle");
+  var nav = document.getElementById("nav");
+  
+  // Add a click event listener to the toggle button
+  toggle.addEventListener("click", function() {
+    // Toggle the "show" class on the nav element
+    nav.classList.toggle("show");
+  });
+  
+  </script>
+  
+  
+  
+      <script>
+        // When the user scrolls the page, execute myFunction
+  window.onscroll = function() {
+      myFunction();
+  };
+  
+  // Get the header
+  var header = document.getElementById("myHeader");
+  
+  // Get the offset position of the header
+  var sticky = header.offsetTop;
+  
+  // Add the sticky class to the header when it reaches its scroll position
+  function myFunction() {
+      if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+      } else {
+          header.classList.remove("sticky");
+      }
+  }
+  
+      </script>
+    </header>
+    <div class="about">
+        <h1 class="h1">About</h1>
+        <p >Welcome to Arbaminch Hotel, where luxury meets comfort, and every moment is designed to exceed your expectations. Nestled in the heart of Arbaminch, our boutique hotel offers a sanctuary of tranquility amidst the vibrant pulse of the city.</p>
+        <p>Step into a world of refined elegance as our attentive staff greets you with warm hospitality. Each of our exquisitely appointed rooms and suites is thoughtfully crafted to provide a haven of relaxation, featuring plush bedding, modern amenities, and stunning views of the city skyline/sea/mountains (customize based on your location).</p>
+        <p>Indulge your senses with culinary delights at our renowned restaurant, where our talented chefs artfully blend local flavors with global influences to create culinary masterpieces that will tantalize your taste buds.</p>
+        <p>Unwind and rejuvenate at our spa, where expert therapists offer an array of holistic treatments designed to restore balance to your mind, body, and spirit.</p>
+        <p>Whether you're here for business or leisure, our dedicated concierge team is at your service to ensure every aspect of your stay is seamless and memorable. From arranging personalized excursions to recommending hidden gems off the beaten path, we're here to curate unforgettable experiences tailored just for you.</p>
+        <p>Experience the epitome of luxury and hospitality at Arbaminch Hotel, where every stay is a journey to be cherished and remembered.</p>
+    </div>
+</body>
+</html>
